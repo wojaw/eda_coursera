@@ -1,0 +1,7 @@
+png('plot2.png', width=480, height=480)
+plot(data$Global_active_power, xlab=NA, ylab='Global Activde Power (kilowatts)', type='l', axes=F)
+box('plot')
+plot2_days = c(which(data$Time == '00:00:00'),nrow(data))
+axis(1, at=plot2_days, labels=c('Thu','Fri','Sat'))
+axis(2)
+dev.off()
